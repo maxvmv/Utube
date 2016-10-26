@@ -1,0 +1,91 @@
+﻿@model Utube.Models.Video
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Video</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Videotitle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Videotitle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vlink)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vlink)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Shared)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Shared)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Datein)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Datein)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Like)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Like)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dislike)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dislike)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Profileid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Profileid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Views)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Views)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Info)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Info)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

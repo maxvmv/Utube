@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Utube.Models.Item>
+
+
+@{
+    ViewBag.Title = "Поиск видео";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<ul>
+    @foreach (Utube.Models.Item i in Model)
+    {
+    <li style="list-style-type:none;">
+        <hr>
+        <div class="row panel panel-success">
+            <div class="col-sm-6">
+
+                <dl class="dl-horizontal">
+                    <dt>
+                        ID видео
+                    </dt>
+
+                    <dd>
+                        @i.id.videoId
+                    </dd>
+
+
+                    <dt>
+                        embed видео
+                    </dt>
+
+                    <dd>
+                        https://www.youtube.com/embed/@i.id.videoId
+                    </dd>
+
+
+                    <dt>
+                        URL видео
+                    </dt>
+
+                    <dd>
+                        <a href="https://www.youtube.com/watch?v=@i.id.videoId">Оригинал</a>
+
+                    </dd>
+
+                    
+
+
+
+                </dl>
+            </div>
+
+            <div class="col-sm-4">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/" +@i.id.videoId frameborder="0" allowfullscreen></iframe>
+            </div>
+
+        </div>
+    </li>
+    }
+</ul>
